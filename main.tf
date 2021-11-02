@@ -51,7 +51,7 @@ resource "aws_iam_user_policy" "circleci" {
 
 resource "aws_s3_bucket" "app" {
   tags = {
-    Name = "App Bucket"
+    Name = "Apps Bucket"
   }
 
   bucket = "${var.app}.${var.label}.${random_uuid.randomid.result}"
